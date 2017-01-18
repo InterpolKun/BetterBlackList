@@ -1,0 +1,22 @@
+{
+	"background": {
+      "page": "background.html"
+   	},
+	"manifest_version": 2,
+	"name": "Better Black List",
+	"options_page": "options.html",
+	"description": "Убирает всю информацию об указанном пользователе: сообщения, посты, комментарии.",
+	"version": "0.01",
+	"permissions": [
+      "storage"
+    ],
+
+	"content_scripts": [{
+		"css": [  ],
+		"matches": ["*://vk.com/im*"],
+		"js": ["vk_inject.js", "jquery-3.1.1.min.js"],
+		"run_at": "document_idle"
+	}]
+}
+
+
